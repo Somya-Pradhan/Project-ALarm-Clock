@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link rel="icon" type="favicon" href="assets/alarm-clock.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Alarm body-->
+    <div class="wrapper">
+
+        <!--Section for clock-->
+        <section class="alarm-clock">
+            <span id="hrs">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+            <span id="period">AM</span>
+        </section>
+
+        <!--Section for alarm-->
+        <div class="add-alarms">
+            <!--Section for alarm clock-->
+            <div class="set-alarm">
+                <label for="set-hour">Hours</label>
+                <input type="number" id="set-hour" min="1" max="12">
+                <label for="set-minute">Mins</label>
+                <input type="number" id="set-minute" min="0" max="59">
+                <label for="set-period"></label>
+                <select id="set-period">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+
+            <!--Section for set alarm button-->
+            <div>
+                <button class="add-button"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M7.88 3.39L6.6 1.86 2 5.71l1.29 1.53 4.59-3.85zM22 5.72l-4.6-3.86-1.29 1.53 4.6 3.86L22 5.72zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7zm1-11h-2v3H8v2h3v3h2v-3h3v-2h-3V9z"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!--Section for alarm list-->
+            <div class="alarm-list">
+                <div class="heading">Alarms</div>
+                <ul id="list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <audio id="alarm-sound" src="assets/alarm-clock-short-1.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
